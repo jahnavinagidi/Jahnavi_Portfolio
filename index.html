@@ -59,6 +59,42 @@
 			<li class="page-scroll"><a href="#skills">Skills</a></li>
 			<li class="page-scroll"><a href="#resume">Experience</a></li>
 			<li class="page-scroll"><a href="#contact">Contact</a></li>
+
+			<button id="musicToggle" aria-pressed="false"><i class="fa fa-music" aria-hidden="true"></i></button>
+<audio id="bgm" loop preload="none">
+  <source src="../music.mp3" type="audio/mpeg" />
+</audio>
+
+<script>
+  const btn = document.getElementById('musicToggle');
+  const audio = document.getElementById('bgm');
+  // remember user preference
+  const pref = localStorage.getItem('bgm') || 'off';
+
+  if (pref === 'on') {
+    // browsers need a gesture to play; we start paused
+    btn.textContent = '▶';
+  }
+
+  btn.addEventListener('click', async () => {
+    if (audio.paused) {
+      try {
+        await audio.play();
+        btn.textContent = '⏸';
+        btn.setAttribute('aria-pressed', 'true');
+        localStorage.setItem('bgm', 'on');
+      } catch (e) {
+        console.log('Playback blocked:', e);
+      }
+    } else {
+      audio.pause();
+      btn.textContent = '▶';
+      btn.setAttribute('aria-pressed', 'false');
+      localStorage.setItem('bgm', 'off');
+    }
+  });
+</script>
+
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
