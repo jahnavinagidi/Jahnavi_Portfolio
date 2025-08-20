@@ -1395,4 +1395,6 @@ button#musicToggle {
   border: none;
   color: #970eee;
   font-size: 25px;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
 }

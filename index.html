@@ -60,10 +60,16 @@
 			<li class="page-scroll"><a href="#resume">Experience</a></li>
 			<li class="page-scroll"><a href="#contact">Contact</a></li>
 
-			<button id="musicToggle" aria-pressed="false"><i class="fa fa-music" aria-hidden="true"></i></button>
-<audio id="bgm" loop preload="none">
-  <source src="../music.mp3" type="audio/mpeg" />
-</audio>
+			<li class="page-scroll">
+				<button id="musicToggle" aria-pressed="false" aria-label="Toggle music" class="btn btn-link navbar-btn">
+				  <i class="fa fa-music" aria-hidden="true"></i>
+				  
+				</button>
+			  </li>
+
+			  <audio id="bgm" loop preload="none">
+				<source src="./music.mp3" type="audio/mpeg" />
+			  </audio>
 
 <script>
   const btn = document.getElementById('musicToggle');
