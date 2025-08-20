@@ -1318,8 +1318,7 @@ figcaption h2 {
   position: relative;
   width: 100%;
   height: auto;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url("../Images/contactMe.jpg") no-repeat center top;
+  margin-top: 50px;
   background-color: transparent;
   -webkit-background-size: cover;
   -moz-background-size: cover;
